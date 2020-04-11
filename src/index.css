@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./img/DD Old Paper Texture 77722.svg");
+  background-size: cover;
 }
 
 code {
