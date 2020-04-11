@@ -1,24 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import titleImg from './img/peter02.png'
 
 function App() {
   return (
     <div className="App">
-
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
+      <h2>THE TALE OF PETER RABBIT</h2>
+      <h4>BY BEATRIX POTTER</h4>
+      <img src={titleImg} alt=""/>
     </div>
   );
 }
