@@ -1,6 +1,6 @@
 # Runcible
 
-A children's Storybook WebApp
+A Children's Storybook WebApp
 
 ## Available Scripts
 
