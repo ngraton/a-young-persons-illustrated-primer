@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import titleImg from './img/peter02.png'
+import titleImg from './img/peter-title.png'
 
 function App() {
   return (
