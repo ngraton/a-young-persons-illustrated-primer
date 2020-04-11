@@ -1,6 +1,6 @@
 import React from 'react';
 
-import titleImg from './img/peter-title.png'
+import titleImg from '../img/peter-title.png'
 
 
 function Book() {
@@ -12,3 +12,5 @@ function Book() {
     </div>
   )
 }
+
+export default Book;
