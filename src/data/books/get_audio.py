@@ -9,7 +9,7 @@ from tempfile import gettempdir
 
 # Create a client using the credentials and region defined in the [adminuser]
 # section of the AWS credentials file (~/.aws/credentials).
-session = Session(profile_name="adminuser")
+session = Session()
 polly = session.client("polly")
 
 try:
@@ -27,12 +27,12 @@ if "AudioStream" in response:
     # number of parallel connections. Here we are using contextlib.closing to
     # ensure the close method of the stream object will be called automatically
     # at the end of the with statement's scope.
-    # with closing(response["AudioStream"]) as stream:
-        output = os.path.join(gettempdir(), "speech.mp3")
+    with closing(response["AudioStream"]) as stream:
+        # output = os.path.join(gettempdir(), "speech.mp3")
 
         try:
             # Open a file for writing the output as a binary stream
-            # with open(output, "wb") as file:
+            with open("speech.mp3", "wb") as file:
                 file.write(stream.read())
         except IOError as error:
             # Could not write to file, exit gracefully
