@@ -18,7 +18,7 @@ function Page(props) {
         {page}
       </div>
       <div
-        className="column"
+        className="column page-text"
       >
         <p>{book.text[page -1]}</p>
       </div>

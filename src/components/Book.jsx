@@ -15,7 +15,6 @@ function Book(props) {
           <h2>{book.title}</h2>
           <h4>By {book.author}</h4>
           <img src={titleImgPath} alt={props.title}/>
-          {page}
         </div>
       )
     }
