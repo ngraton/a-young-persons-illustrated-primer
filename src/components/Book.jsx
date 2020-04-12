@@ -9,9 +9,9 @@ function Book(props) {
   const [page, setPage] = React.useState(0)
 
   const getPage = () => {
-    if (true){
+    if (page <= 0){
       return (
-        <div className="column">
+        <div className="column title">
           <h2>{book.title}</h2>
           <h4>By {book.author}</h4>
           <img src={titleImgPath} alt={props.title}/>
@@ -19,12 +19,11 @@ function Book(props) {
         </div>
       )
     }
-    return <Page page={page}/>
+    return <Page page={page} book={book}/>
   }
 
   const prevPage = () => {
     if (page !== 0) { setPage(page-1) }
-
   }
 
   const nextPage = () => {
@@ -32,14 +31,14 @@ function Book(props) {
   }
 
   return (
-    <div className="columns book">
+    <div className="columns book is-vcentered">
       <div
-        className="column"
+        className="column is-one-fifth"
         onClick={() => prevPage()}
       />
       { getPage() }
       <div
-        className="column"
+        className="column is-one-fifth"
         onClick={() => nextPage()}
       />
     </div>
