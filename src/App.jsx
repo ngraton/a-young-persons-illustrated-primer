@@ -5,7 +5,7 @@ import Book from './components/Book.jsx'
 function App() {
   return (
     <div className="App">
-      <Book />
+      <Book title="TheTaleOfPeterRabbit"/>
     </div>
   );
 }

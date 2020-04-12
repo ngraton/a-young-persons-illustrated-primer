@@ -1,14 +1,19 @@
 import React from 'react';
+import book from '../data/books/TheTaleOfPeterRabbit.json'
 
-import titleImg from '../img/peter-title.png'
+function Book(props) {
 
+  const titleImgPath = `./img/${book.image}title.png`
 
-function Book() {
   return (
-    <div>
-      <h2>THE TALE OF PETER RABBIT</h2>
-      <h4>BY BEATRIX POTTER</h4>
-      <img src={titleImg} alt=""/>
+    <div className="columns book">
+      <div className="column"/>
+      <div className="column">
+        <h2>{book.title}</h2>
+        <h4>By {book.author}</h4>
+        <img src={titleImgPath} alt={props.title}/>
+      </div>
+      <div className="column"/>
     </div>
   )
 }
