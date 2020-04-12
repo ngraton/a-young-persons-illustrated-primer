@@ -8,7 +8,7 @@ import subprocess
 import json
 from tempfile import gettempdir
 
-text_list = json.loads(open("./TheTaleOfPeterRabbit.json", "r"))
+text_list = json.load(open("./TheTaleOfPeterRabbit.json", "r"))
 
 for text, index in text_list:
     # Create a client using the credentials and region defined in the [adminuser]
