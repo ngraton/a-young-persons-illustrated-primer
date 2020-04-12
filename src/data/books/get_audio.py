@@ -8,7 +8,8 @@ import subprocess
 import json
 from tempfile import gettempdir
 
-text_list = json.load(open("./TheTaleOfPeterRabbit.json", "r"))
+book = json.load(open("./TheTaleOfPeterRabbit.json", "r"))
+text_list = book['text']
 
 for index, text in enumerate(text_list):
     # Create a client using the credentials and region defined in the [adminuser]
@@ -36,7 +37,7 @@ for index, text in enumerate(text_list):
 
             try:
                 # Open a file for writing the output as a binary stream
-                with open("{index}.mp3", "wb") as file:
+                with open("{}.mp3".format(index), "wb") as file:
                     file.write(stream.read())
             except IOError as error:
                 # Could not write to file, exit gracefully
