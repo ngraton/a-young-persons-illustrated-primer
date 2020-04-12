@@ -10,7 +10,7 @@ from tempfile import gettempdir
 
 text_list = json.load(open("./TheTaleOfPeterRabbit.json", "r"))
 
-for text, index in text_list:
+for index, text in enumerate(text_list):
     # Create a client using the credentials and region defined in the [adminuser]
     # section of the AWS credentials file (~/.aws/credentials).
     session = Session()
