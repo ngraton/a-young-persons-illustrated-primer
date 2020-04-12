@@ -6,6 +6,16 @@ function Page(props) {
 
   const imageNum = page + 1 > 9 ? page + 1: "0" + (page +1)
   const imagePath = `./img/${book.image}${imageNum}.png`
+  const audioPath = `./audio/${page - 1}.mp3`
+
+  const speech = new Audio()
+
+  React.useEffect(() => {
+    speech.pause()
+    speech.src = audioPath
+    speech.play()
+    return () => { speech.pause() }
+    })
 
   return (
     <div
