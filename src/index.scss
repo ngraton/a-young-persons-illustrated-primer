@@ -27,11 +27,14 @@ code {
 
 .book{
   height: 100%;
-  
 }
 
 .title{
   text-align: center;
+}
+
+.page-control {
+  height: 100%;
 }
 
 @import "../node_modules/bulma/bulma.sass"

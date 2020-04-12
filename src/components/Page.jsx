@@ -4,7 +4,7 @@ function Page(props) {
   const page = props.page
   const book = props.book
 
-  const imageNum = page > 9 ? page: "0" + page
+  const imageNum = page + 1 > 9 ? page + 1: "0" + (page +1)
   const imagePath = `./img/${book.image}${imageNum}.png`
 
   return (

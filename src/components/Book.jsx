@@ -33,12 +33,12 @@ function Book(props) {
   return (
     <div className="columns book is-vcentered">
       <div
-        className="column is-one-fifth"
+        className="column is-one-fifth page-control"
         onClick={() => prevPage()}
       />
       { getPage() }
       <div
-        className="column is-one-fifth"
+        className="column is-one-fifth page-control"
         onClick={() => nextPage()}
       />
     </div>
